@@ -8,6 +8,8 @@
     // ===== NAV TOGGLE =====
     const navToggle = document.getElementById('nav-toggle');
     const nav = document.getElementById('main-nav');
+    const header = document.querySelector('.site-header');
+
     if (navToggle && nav) {
       navToggle.addEventListener('click', function(e) {
         e.stopPropagation();
@@ -18,6 +20,14 @@
           nav.classList.remove('open');
         }
       });
+    }
+
+    if (header) {
+      const toggleHeaderStyle = () => {
+        header.classList.toggle('scrolled', window.scrollY > 20);
+      };
+      window.addEventListener('scroll', toggleHeaderStyle, { passive: true });
+      toggleHeaderStyle();
     }
 
     // ===== SMOOTH SCROLL (for home page anchors) =====
@@ -31,6 +41,32 @@
         }
       });
     });
+
+    // ===== SECTION OBSERVER FOR HOME NAV =====
+    const sectionLinks = document.querySelectorAll('.nav a[href^="#"]');
+    const sectionIds = ['home', 'research', 'publications', 'teaching', 'contact'];
+    const sectionElements = sectionIds
+      .map(id => document.getElementById(id))
+      .filter(Boolean);
+
+    if (sectionLinks.length && sectionElements.length) {
+      const updateActiveSection = () => {
+        let currentSection = sectionElements[0].id;
+        sectionElements.forEach(section => {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= 96 && rect.bottom > 96) {
+            currentSection = section.id;
+          }
+        });
+
+        sectionLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === `#${currentSection}`);
+        });
+      };
+
+      window.addEventListener('scroll', updateActiveSection, { passive: true });
+      updateActiveSection();
+    }
 
     // ===== REVEAL ON SCROLL =====
     const revealElements = document.querySelectorAll('.fade-up, .reveal');
@@ -111,17 +147,14 @@
     // Check for saved theme preference
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
+    const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+
     // Set initial theme
-    if (savedTheme === 'light') {
+    if (initialTheme === 'light') {
       document.body.classList.add('light-theme');
       updateThemeIcon('light');
       updateToggleLabel('light');
-    } else if (savedTheme === 'dark') {
-      document.body.classList.remove('light-theme');
-      updateThemeIcon('dark');
-      updateToggleLabel('dark');
-    } else if (prefersDark) {
+    } else {
       document.body.classList.remove('light-theme');
       updateThemeIcon('dark');
       updateToggleLabel('dark');
@@ -129,6 +162,9 @@
 
     // Theme toggle button
     const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+      themeToggle.title = initialTheme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode';
+    }
     if (themeToggle) {
       themeToggle.addEventListener('click', function(e) {
         e.preventDefault();

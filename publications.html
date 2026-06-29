@@ -6,19 +6,19 @@
     <title>Professor Portfolio — Publications</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
     <header class="site-header">
       <div class="container header-inner">
-        <a class="logo" href="home.html"><span>Abel</span> Orogo</a>
+        <a class="logo" href="index.html"><span>Dr.</span> Abel Orogo</a>
         <nav class="nav" id="main-nav">
-          <a href="index.html" class="active">Home</a>
+          <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="research.html">Research</a>
-          <a href="publications.html">Publications</a>
+          <a href="publications.html" class="active">Publications</a>
           <a href="teaching.html">Teaching</a>
           <a href="cv.html">CV</a>
           <a href="works.html">Works</a>
@@ -28,7 +28,13 @@
           <a href="service.html">Service</a>
           <a href="contact.html">Contact</a>
         </nav>
-        <button id="nav-toggle" aria-label="Toggle navigation">☰</button>
+        <div class="header-actions">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" title="Switch to Light Mode">
+            <span class="theme-icon">🌙</span>
+            <span class="toggle-label">Dark</span>
+          </button>
+          <button id="nav-toggle" aria-label="Toggle navigation">☰</button>
+        </div>
       </div>
     </header>
 

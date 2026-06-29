@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professor Portfolio — Home</title>
+    <title>Dr. Abel Orogo · Professor of Computer Science</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -14,7 +15,7 @@
     <!-- ===== HEADER ===== -->
     <header class="site-header">
       <div class="container header-inner">
-        <a class="logo" href="home.html"><span>Abel</span> Orogo</a>
+        <a class="logo" href="index.html"><span>Dr.</span> Abel Orogo</a>
         <nav class="nav" id="main-nav">
           <a href="index.html" class="active">Home</a>
           <a href="about.html">About</a>
@@ -41,37 +42,56 @@
 
     <main>
 
-      <!-- ===== HERO with 3D PHOTO & GREEN CYCLING ===== -->
-      <section class="hero" id="home">
-        <div class="container hero-inner">
-          <div class="hero-copy fade-up fade-up-d1">
-            <h1 class="name">Abel Orogo <span class="highlight">Mong'are</span></h1>
-            <p class="lead">Dynamic professional • Strategic thinker • Problem solver — Driving organizational growth through innovation and excellence.</p>
-            <div class="hero-ctas">
-              <a class="btn primary" href="cv.html">Download CV</a>
-              <a class="btn ghost" href="research.html">View Research</a>
-              <a class="btn ghost" href="publications.html">Publications</a>
-            </div>
-          </div>
-
-          <!-- 3D PHOTO CARD with GREEN CYCLING ANIMATION - LARGER -->
-          <div class="hero-card fade-up fade-up-d2" id="photo-card">
-            <div class="portrait-wrapper">
-              <div class="portrait-ring"></div>
-              <div class="portrait-3d floating" id="portrait-3d">
-                <img src="port.jpg" alt="Abel Orogo Mong'are" id="profile-img">
-              </div>
-            </div>
-            <ul class="quick-stats">
-              <li><strong>25+</strong><span>Years Exp.</span></li>
-              <li><strong>120+</strong><span>Publications</span></li>
-              <li><strong>30</strong><span>Grants</span></li>
-              <li><strong>28</strong><span>Advisees</span></li>
-            </ul>
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="container hero-inner">
+    <div class="hero-visual fade-up fade-up-d1">
+      <!-- 3D PHOTO CARD with MULTI-COLOR WAVE RING -->
+      <div class="hero-card" id="photo-card">
+        <div class="portrait-wrapper">
+          <div class="portrait-ring"></div>
+          <div class="portrait-3d floating" id="portrait-3d">
+            <img src="port.jpg" alt="Dr Abel Orogo portrait" class="hero-photo">
           </div>
         </div>
-      </section>
+        <ul class="quick-stats">
+          <li><strong>25+</strong><span>Years Exp.</span></li>
+          <li><strong>120+</strong><span>Publications</span></li>
+          <li><strong>30</strong><span>Grants</span></li>
+          <li><strong>28</strong><span>Advisees</span></li>
+        </ul>
+      </div>
+    </div>
 
+    <div class="hero-copy fade-up fade-up-d2">
+      <p class="eyebrow">Professor of Computer Science</p>
+      <h1>Dr. Abel <span class="highlight">Orogo</span></h1>
+      <p class="hero-subtitle">Professor of Computer Science | AI for Agriculture Researcher | Strathmore University</p>
+      <p class="hero-text">Building AI models to help Kenyan farmers increase crop yields by 30%.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="research.html">View My Research</a>
+        <a class="btn secondary" href="contact.html">Contact Me</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container hero-support fade-up fade-up-d3">
+    <div class="hero-stats">
+      <div class="hero-stat-card">
+        <span class="stat-value">15+</span>
+        <span class="stat-label">Published Papers</span>
+      </div>
+      <div class="hero-stat-card">
+        <span class="stat-value">8</span>
+        <span class="stat-label">Years Teaching</span>
+      </div>
+      <div class="hero-stat-card">
+        <span class="stat-value">3</span>
+        <span class="stat-label">Research Grants</span>
+      </div>
+    </div>
+  </div>
+</section>
       <!-- ===== QUICK LINKS / NAVIGATION CARDS ===== -->
       <section class="container quick-links">
         <h2 class="section-title fade-up">Explore My Work</h2>
@@ -266,7 +286,7 @@
 
     <footer class="site-footer">
       <div class="container">
-        <p>© <span id="year"></span> <span>Abel Orogo Mong'are</span> —  website built with excellence.</p>
+        <p>© <span id="year"></span> <span>Dr. Abel Orogo</span> — Built with <i class="fas fa-heart" style="color: var(--color-blue);"></i> for impact.</p>
         <p style="margin-top: 8px; font-size: 12px;">
           <a href="privacy.html" style="color: var(--muted); text-decoration: none;">Privacy Policy</a>
         </p>
