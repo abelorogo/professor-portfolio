@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professor Portfolio — Publications</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="home.html"><span>Abel</span> Orogo</a>
+        <nav class="nav" id="main-nav">
+          <a href="home.html" class="active">Home</a>
+          <a href="about.html">About</a>
+          <a href="research.html">Research</a>
+          <a href="publications.html">Publications</a>
+          <a href="teaching.html">Teaching</a>
+          <a href="cv.html">CV</a>
+          <a href="works.html">Works</a>
+          <a href="achievements.html">Achievements</a>
+          <a href="blog.html">Blog</a>
+          <a href="media.html">Media</a>
+          <a href="service.html">Service</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button id="nav-toggle" aria-label="Toggle navigation">☰</button>
+      </div>
+    </header>
+
+    <main class="page-publications">
+      <section class="container page-hero">
+        <div class="page-hero-inner">
+          <div class="page-hero-image fade-up fade-up-d1">
+            <div class="portrait-wrapper-small">
+              <div class="portrait-ring-small"></div>
+              <img src="port.jpg" alt="Professor Abel Orogo" class="page-profile-img">
+            </div>
+          </div>
+          <div class="page-hero-content fade-up fade-up-d2">
+            <h1 class="page-title">Publications & <span class="highlight">Research</span></h1>
+            <p class="page-subtitle">Journal articles, books, and conference proceedings</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container page-content">
+        <!-- Publication Stats -->
+        <div class="publication-stats">
+          <div class="pub-stat-item">
+            <span class="pub-stat-number">47</span>
+            <span class="pub-stat-label">Total Publications</span>
+          </div>
+          <div class="pub-stat-item">
+            <span class="pub-stat-number">34</span>
+            <span class="pub-stat-label">h-index</span>
+          </div>
+          <div class="pub-stat-item">
+            <span class="pub-stat-number">2100+</span>
+            <span class="pub-stat-label">Citations</span>
+          </div>
+          <div class="pub-stat-item">
+            <span class="pub-stat-number">12</span>
+            <span class="pub-stat-label">Journal Articles</span>
+          </div>
+          <div class="pub-stat-item">
+            <span class="pub-stat-number">8</span>
+            <span class="pub-stat-label">Books/Monographs</span>
+          </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="publication-filters fade-up">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="journal">Journal Articles</button>
+          <button class="filter-btn" data-filter="book">Books</button>
+          <button class="filter-btn" data-filter="chapter">Book Chapters</button>
+          <button class="filter-btn" data-filter="conference">Conference Papers</button>
+          <button class="filter-btn" data-filter="2024">2024</button>
+          <button class="filter-btn" data-filter="2023">2023</button>
+          <button class="filter-btn" data-filter="2022">2022</button>
+        </div>
+
+        <!-- Publication List -->
+        <div class="publications-list" id="publications-list">
+          <!-- 2024 -->
+          <div class="publication-item fade-up" data-type="journal" data-year="2024">
+            <div class="pub-type">📄 Journal Article</div>
+            <h3>Digital Methods for Historical Archives: A New Framework</h3>
+            <p class="pub-authors">Mong'are, A.O., Smith, J., & Rossi, M.</p>
+            <p class="pub-journal"><em>Journal of Digital Humanities</em>, 45(3), 112-134</p>
+            <p class="pub-year">2024</p>
+            <div class="pub-actions">
+              <a href="#" class="pub-link">DOI: 10.1234/jdh.2024.0453</a>
+              <a href="#" class="pub-link">PDF</a>
+              <span class="pub-citations">Cited by 12</span>
+            </div>
+          </div>
+
+          <div class="publication-item fade-up" data-type="conference" data-year="2024">
+            <div class="pub-type">🎤 Conference Paper</div>
+            <h3>AI Ethics in Digital Humanities: Challenges and Opportunities</h3>
+            <p class="pub-authors">Mong'are, A.O. & Garcia, M.</p>
+            <p class="pub-journal"><em>Proceedings of DH2024 Conference</em>, 156-172</p>
+            <p class="pub-year">2024</p>
+            <div class="pub-actions">
+              <a href="#" class="pub-link">DOI: 10.5678/dh2024.156</a>
+              <a href="#" class="pub-link">PDF</a>
+              <span class="pub-citations">Cited by 5</span>
+            </div>
+          </div>
+
+          <!-- 2023 -->
+          <div class="publication-item fade-up" data-type="book" data-year="2023">
+            <div class="pub-type">📚 Book</div>
+            <h3>Strategic Leadership in the Digital Age</h3>
+            <p class="pub-authors">Mong'are, A.O.</p>
+            <p class="pub-journal"><em>Oxford University Press</em></p>
+            <p class="pub-year">2023</p>
+            <div class="pub-actions">
+              <a href="#" class="pub-link">ISBN: 978-0-19-123456-7</a>
+              <a href="#" class="pub-link">Publisher</a>
+              <span class="pub-citations">Cited by 45</span>
+            </div>
+          </div>
+
+          <div class="publication-item fade-up" data-type="journal" data-year="2023">
+            <div class="pub-type">📄 Journal Article</div>
+            <h3>Narrative AI: New Frontiers in Storytelling</h3>
+            <p class="pub-authors">Mong'are, A.O. & Johnson, S.</p>
+            <p class="pub-journal"><em>AI & Society</em>, 38(4), 567-582</p>
+            <p class="pub-year">2023</p>
+            <div class="pub-actions">
+              <a href="#" class="pub-link">DOI: 10.7890/ais.2023.0384</a>
+              <a href="#" class="pub-link">PDF</a>
+              <span class="pub-citations">Cited by 18</span>
+            </div>
+          </div>
+
+          <!-- 2022 -->
+          <div class="publication-item fade-up" data-type="chapter" data-year="2022">
+            <div class="pub-type">📖 Book Chapter</div>
+            <h3>AI and Ethics in Higher Education: A Framework</h3>
+            <p class="pub-authors">Mong'are, A.O. & Garcia, M.</p>
+            <p class="pub-journal"><em>In: The Future of Higher Education (Eds. Johnson, S. & Chen, M.)</em>, 78-95</p>
+            <p class="pub-year">2022</p>
+            <div class="pub-actions">
+              <a href="#" class="pub-link">DOI: 10.5678/fhe.2022.078</a>
+              <a href="#" class="pub-link">PDF</a>
+              <span class="pub-citations">Cited by 8</span>
+            </div>
+          </div>
+
+          <div class="publication-item fade-up" data-type="journal" data-year="2022">
+            <div class="pub-type">📄 Journal Article</div>
+            <h3>Corpus Linguistics & Digital Humanities</h3>
+            <p class="pub-authors">Mong'are, A.O. & Smith, J.</p>
+            <p class="pub-journal"><em>Digital Scholarship in the Humanities</em>, 37(2), 89-106</p>
+            <p class="pub-year">2022</p>
+            <div class="pub-actions">
+              <a href="#" class="pub-link">DOI: 10.9012/dsh.2022.0372</a>
+              <a href="#" class="pub-link">PDF</a>
+              <span class="pub-citations">Cited by 14</span>
+            </div>
+          </div>
+
+          <!-- 2021 -->
+          <div class="publication-item fade-up" data-type="conference" data-year="2021">
+            <div class="pub-type">🎤 Conference Paper</div>
+            <h3>Process Optimization in Academic Institutions</h3>
+            <p class="pub-authors">Mong'are, A.O. & Chen, M.</p>
+            <p class="pub-journal"><em>Proceedings of the International Conference on Higher Education</em>, 245-258</p>
+            <p class="pub-year">2021</p>
+            <div class="pub-actions">
+              <a href="#" class="pub-link">DOI: 10.9012/iche.2021.245</a>
+              <a href="#" class="pub-link">PDF</a>
+              <span class="pub-citations">Cited by 6</span>
+            </div>
+          </div>
+
+          <div class="publication-item fade-up" data-type="book" data-year="2021">
+            <div class="pub-type">📚 Book</div>
+            <h3>Visual Storytelling in Museums: A Digital Approach</h3>
+            <p class="pub-authors">Mong'are, A.O. & Rossi, M.</p>
+            <p class="pub-journal"><em>Cambridge University Press</em></p>
+            <p class="pub-year">2021</p>
+            <div class="pub-actions">
+              <a href="#" class="pub-link">ISBN: 978-1-108-98765-4</a>
+              <a href="#" class="pub-link">Publisher</a>
+              <span class="pub-citations">Cited by 32</span>
+            </div>
+          </div>
+
+          <!-- 2020 -->
+          <div class="publication-item fade-up" data-type="journal" data-year="2020">
+            <div class="pub-type">📄 Journal Article</div>
+            <h3>Team Dynamics in Multi-Cultural Research Environments</h3>
+            <p class="pub-authors">Mong'are, A.O., Kim, D., & Rossi, M.</p>
+            <p class="pub-journal"><em>Journal of Organizational Behavior</em>, 40(2), 89-105</p>
+            <p class="pub-year">2020</p>
+            <div class="pub-actions">
+              <a href="#" class="pub-link">DOI: 10.7890/job.2020.0402</a>
+              <a href="#" class="pub-link">PDF</a>
+              <span class="pub-citations">Cited by 23</span>
+            </div>
+          </div>
+
+          <div class="publication-item fade-up" data-type="chapter" data-year="2020">
+            <div class="pub-type">📖 Book Chapter</div>
+            <h3>Historical Data & Semantic Web Applications</h3>
+            <p class="pub-authors">Mong'are, A.O.</p>
+            <p class="pub-journal"><em>In: Digital Humanities: New Perspectives (Ed. Smith, J.)</em>, 156-178</p>
+            <p class="pub-year">2020</p>
+            <div class="pub-actions">
+              <a href="#" class="pub-link">DOI: 10.2345/dhnp.2020.156</a>
+              <a href="#" class="pub-link">PDF</a>
+              <span class="pub-citations">Cited by 11</span>
+            </div>
+          </div>
+
+          <!-- 2019 -->
+          <div class="publication-item fade-up" data-type="conference" data-year="2019">
+            <div class="pub-type">🎤 Conference Paper</div>
+            <h3>Innovation Management in Higher Education</h3>
+            <p class="pub-authors">Mong'are, A.O.</p>
+            <p class="pub-journal"><em>Proceedings of the World Innovation Summit</em>, 78-92</p>
+            <p class="pub-year">2019</p>
+            <div class="pub-actions">
+              <a href="#" class="pub-link">DOI: 10.3456/wis.2019.078</a>
+              <a href="#" class="pub-link">PDF</a>
+              <span class="pub-citations">Cited by 4</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- No Results Message -->
+        <div class="no-results" id="no-results" style="display: none;">
+          <p>No publications found for the selected filter.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> <span>Abel Orogo Mong'are</span> — Portfolio built with excellence.</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+      // Publication Filtering
+      document.addEventListener('DOMContentLoaded', function() {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const publications = document.querySelectorAll('.publication-item');
+        const noResults = document.getElementById('no-results');
+
+        filterBtns.forEach(btn => {
+          btn.addEventListener('click', function() {
+            // Remove active class from all buttons
+            filterBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+
+            const filter = this.dataset.filter;
+            let visibleCount = 0;
+
+            publications.forEach(pub => {
+              const type = pub.dataset.type;
+              const year = pub.dataset.year;
+
+              if (filter === 'all') {
+                pub.style.display = 'block';
+                visibleCount++;
+              } else if (filter === type || filter === year) {
+                pub.style.display = 'block';
+                visibleCount++;
+              } else {
+                pub.style.display = 'none';
+              }
+            });
+
+            // Show/hide no results message
+            if (visibleCount === 0) {
+              noResults.style.display = 'block';
+            } else {
+              noResults.style.display = 'none';
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

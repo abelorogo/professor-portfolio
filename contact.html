@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professor Portfolio — Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <!-- ===== HEADER WITH THEME TOGGLE ===== -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="home.html"><span>Abel</span> Orogo</a>
+        <nav class="nav" id="main-nav">
+          <a href="home.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="research.html">Research</a>
+          <a href="publications.html">Publications</a>
+          <a href="teaching.html">Teaching</a>
+          <a href="cv.html">CV</a>
+          <a href="works.html">Works</a>
+          <a href="achievements.html">Achievements</a>
+          <a href="blog.html">Blog</a>
+          <a href="media.html">Media</a>
+          <a href="service.html">Service</a>
+          <a href="contact.html" class="active">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" title="Switch to Light Mode">
+            <span class="theme-icon">🌙</span>
+            <span class="toggle-label">Dark</span>
+          </button>
+          <button id="nav-toggle" aria-label="Toggle navigation">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-contact">
+      <section class="container page-hero">
+        <div class="page-hero-inner">
+          <div class="page-hero-image fade-up fade-up-d1">
+            <div class="portrait-wrapper-small">
+              <div class="portrait-ring-small"></div>
+              <img src="port.jpg" alt="Professor Abel Orogo" class="page-profile-img">
+            </div>
+          </div>
+          <div class="page-hero-content fade-up fade-up-d2">
+            <h1 class="page-title">Get in <span class="highlight">Touch</span></h1>
+            <p class="page-subtitle">I'd love to hear from you — collaborations, inquiries, or just a hello!</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container page-content">
+        <div class="contact-grid-full">
+          <div class="contact-form-wrapper fade-up fade-up-d1">
+            <form class="contact-form" action="#" method="post" onsubmit="return false;">
+              <h2>Send a Message</h2>
+              <label>
+                Your Name
+                <input type="text" name="name" required placeholder="John Doe">
+              </label>
+              <label>
+                Email Address
+                <input type="email" name="email" required placeholder="john@example.com">
+              </label>
+              <label>
+                Subject
+                <input type="text" name="subject" required placeholder="Research Collaboration">
+              </label>
+              <label>
+                Message
+                <textarea name="message" rows="6" required placeholder="Your message here..."></textarea>
+              </label>
+              <button class="btn primary" type="submit">Send Message</button>
+            </form>
+          </div>
+
+          <div class="contact-info-wrapper fade-up fade-up-d2">
+            <div class="contact-card">
+              <h3>Contact Information</h3>
+              <div class="contact-item">
+                <span class="contact-icon">📧</span>
+                <div>
+                  <h4>Email</h4>
+                  <a href="mailto:abelorogo@gmail.com">abelorogo@gmail.com</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon">📞</span>
+                <div>
+                  <h4>Phone</h4>
+                  <a href="tel:+254794556819">+254 794 556 819</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon">📍</span>
+                <div>
+                  <h4>Location</h4>
+                  <p>Kisii, Kenya 40500</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <span class="contact-icon">🔗</span>
+                <div>
+                  <h4>ORCID</h4>
+                  <a href="#">0000-0002-1234-5678</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <h3>Office Hours</h3>
+              <ul class="office-hours">
+                <li><span>Monday</span> <span>9:00 AM - 5:00 PM</span></li>
+                <li><span>Tuesday</span> <span>9:00 AM - 5:00 PM</span></li>
+                <li><span>Wednesday</span> <span>9:00 AM - 5:00 PM</span></li>
+                <li><span>Thursday</span> <span>9:00 AM - 5:00 PM</span></li>
+                <li><span>Friday</span> <span>9:00 AM - 3:00 PM</span></li>
+              </ul>
+              <p class="appointment-note">📅 Appointment recommended</p>
+            </div>
+
+            <!-- Social Links -->
+            <div class="contact-card">
+              <h3>Connect With Me</h3>
+              <div class="social-links">
+                <a href="#" class="social-link" aria-label="Google Scholar">🎓</a>
+                <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+                <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                <a href="#" class="social-link" aria-label="GitHub">💻</a>
+                <a href="#" class="social-link" aria-label="ORCID">📝</a>
+                <a href="#" class="social-link" aria-label="ResearchGate">🔬</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> <span>Abel Orogo Mong'are</span> — Portfolio built with excellence.</p>
+        <p style="margin-top: 8px; font-size: 12px;">
+          <a href="privacy.html" style="color: var(--muted); text-decoration: none;">Privacy Policy</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
