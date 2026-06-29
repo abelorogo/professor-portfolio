@@ -11,10 +11,13 @@
   </head>
   <body>
 
-    <!-- ===== HEADER WITH THEME TOGGLE ===== -->
+    <!-- ===== HEADER ===== -->
     <header class="site-header">
       <div class="container header-inner">
-        <a class="logo" href="index.html"><span>Dr.</span> Abel Orogo</a>
+        <div class="logo-wrapper">
+          <a class="logo" href="index.html"><span>Dr.</span> Abel Orogo</a>
+          <span class="page-name" id="pageName">Contact</span>
+        </div>
         <nav class="nav" id="main-nav">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
@@ -39,6 +42,12 @@
       </div>
     </header>
 
+    <!-- ===== PAGE INDICATOR (Mobile) ===== -->
+    <div class="page-indicator" id="pageIndicator">
+      <span class="page-indicator-label">📧 Contact</span>
+    </div>
+
+    <!-- ===== MAIN CONTENT ===== -->
     <main class="page-contact">
       <section class="container page-hero">
         <div class="page-hero-inner">
@@ -142,9 +151,13 @@
       </section>
     </main>
 
+    <!-- ===== FOOTER ===== -->
     <footer class="site-footer">
       <div class="container">
         <p>© <span id="year"></span> <span>Abel Orogo Mong'are</span> — Personal website built with excellence.</p>
+        <p style="margin-top: 8px; font-size: 12px;">
+          <a href="privacy.html" style="color: var(--muted); text-decoration: none;">Privacy Policy</a>
+        </p>
       </div>
     </footer>
 

@@ -5,6 +5,80 @@
     const el = document.getElementById('year');
     if (el) el.textContent = y;
 
+    // ===== UPDATE PAGE NAME IN NAVBAR =====
+    function updatePageName() {
+      const pageNameElement = document.getElementById('pageName');
+      if (!pageNameElement) return;
+      
+      // Get current page name from URL
+      const path = window.location.pathname;
+      const pageName = path.split('/').pop().replace('.html', '') || 'index';
+      
+      // Map file names to display names
+      const pageNames = {
+        'index': 'Home',
+        'about': 'About',
+        'research': 'Research',
+        'publications': 'Publications',
+        'teaching': 'Teaching',
+        'cv': 'CV',
+        'works': 'Works',
+        'achievements': 'Achievements',
+        'blog': 'Blog',
+        'media': 'Media',
+        'service': 'Service',
+        'contact': 'Contact',
+        'privacy': 'Privacy Policy'
+      };
+      
+      const displayName = pageNames[pageName] || pageName.charAt(0).toUpperCase() + pageName.slice(1);
+      
+      // Update the page name element
+      pageNameElement.textContent = displayName;
+    }
+
+    // ===== PAGE INDICATOR - Auto-detect current page =====
+    function setPageIndicator() {
+      const indicator = document.getElementById('pageIndicator');
+      if (!indicator) return;
+      
+      const path = window.location.pathname;
+      const pageName = path.split('/').pop().replace('.html', '') || 'index';
+      
+      const pageNames = {
+        'index': '🏠 Home',
+        'about': '👤 About',
+        'research': '🔬 Research',
+        'publications': '📄 Publications',
+        'teaching': '🎓 Teaching',
+        'cv': '📋 CV',
+        'works': '💼 Works',
+        'achievements': '🏆 Achievements',
+        'blog': '📝 Blog',
+        'media': '📺 Media',
+        'service': '🤝 Service',
+        'contact': '📧 Contact',
+        'privacy': '🔒 Privacy Policy'
+      };
+      
+      const displayName = pageNames[pageName] || pageName.charAt(0).toUpperCase() + pageName.slice(1);
+      
+      const label = indicator.querySelector('.page-indicator-label');
+      if (label) {
+        label.textContent = displayName;
+      }
+    }
+    
+    // Run both functions
+    updatePageName();
+    setPageIndicator();
+    
+    // Also run when navigation changes
+    window.addEventListener('popstate', function() {
+      updatePageName();
+      setPageIndicator();
+    });
+
     // ===== NAV TOGGLE =====
     const navToggle = document.getElementById('nav-toggle');
     const nav = document.getElementById('main-nav');
@@ -119,23 +193,21 @@
 
     // ===== PAGE TRANSITION EFFECT =====
     const mainElement = document.querySelector('main');
-    document.querySelectorAll('.nav a').forEach(link => {
-      link.addEventListener('click', function(e) {
-        if (this.getAttribute('href') && !this.getAttribute('href').startsWith('#')) {
-          e.preventDefault();
-          const targetUrl = this.getAttribute('href');
-          if (mainElement) {
+    if (mainElement) {
+      document.querySelectorAll('.nav a').forEach(link => {
+        link.addEventListener('click', function(e) {
+          if (this.getAttribute('href') && !this.getAttribute('href').startsWith('#')) {
+            e.preventDefault();
+            const targetUrl = this.getAttribute('href');
             mainElement.style.opacity = '0';
             mainElement.style.transition = 'opacity 0.4s ease';
+            setTimeout(() => {
+              window.location.href = targetUrl;
+            }, 400);
           }
-          setTimeout(() => {
-            window.location.href = targetUrl;
-          }, 400);
-        }
+        });
       });
-    });
 
-    if (mainElement) {
       mainElement.style.opacity = '0';
       setTimeout(() => {
         mainElement.style.transition = 'opacity 0.6s ease';
@@ -144,12 +216,10 @@
     }
 
     // ===== THEME TOGGLE =====
-    // Check for saved theme preference
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
 
-    // Set initial theme
     if (initialTheme === 'light') {
       document.body.classList.add('light-theme');
       updateThemeIcon('light');
@@ -160,35 +230,27 @@
       updateToggleLabel('dark');
     }
 
-    // Theme toggle button
     const themeToggle = document.getElementById('theme-toggle');
     if (themeToggle) {
       themeToggle.title = initialTheme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode';
-    }
-    if (themeToggle) {
       themeToggle.addEventListener('click', function(e) {
         e.preventDefault();
         document.body.classList.toggle('light-theme');
         const isLight = document.body.classList.contains('light-theme');
         
-        // Save preference
         localStorage.setItem('theme', isLight ? 'light' : 'dark');
         
-        // Update icon and label
         updateThemeIcon(isLight ? 'light' : 'dark');
         updateToggleLabel(isLight ? 'light' : 'dark');
         
-        // Add a subtle animation feedback
         this.style.transform = 'scale(0.9)';
         setTimeout(() => {
           this.style.transform = 'scale(1)';
         }, 150);
         
-        // Update tooltip
         this.title = isLight ? 'Switch to Dark Mode' : 'Switch to Light Mode';
       });
       
-      // Add hover tooltip
       themeToggle.addEventListener('mouseenter', function() {
         const isLight = document.body.classList.contains('light-theme');
         this.title = isLight ? 'Switch to Dark Mode' : 'Switch to Light Mode';
@@ -209,7 +271,7 @@
       }
     }
 
-    // ===== PUBLICATION FILTERS (if on publications page) =====
+    // ===== PUBLICATION FILTERS =====
     const filterBtns = document.querySelectorAll('.filter-btn');
     const publications = document.querySelectorAll('.publication-item');
     const noResults = document.getElementById('no-results');
@@ -217,7 +279,6 @@
     if (filterBtns.length > 0 && publications.length > 0) {
       filterBtns.forEach(btn => {
         btn.addEventListener('click', function() {
-          // Remove active class from all buttons
           filterBtns.forEach(b => b.classList.remove('active'));
           this.classList.add('active');
 
@@ -239,13 +300,8 @@
             }
           });
 
-          // Show/hide no results message
           if (noResults) {
-            if (visibleCount === 0) {
-              noResults.style.display = 'block';
-            } else {
-              noResults.style.display = 'none';
-            }
+            noResults.style.display = visibleCount === 0 ? 'block' : 'none';
           }
         });
       });

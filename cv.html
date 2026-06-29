@@ -11,9 +11,13 @@
   </head>
   <body>
 
+    <!-- ===== HEADER ===== -->
     <header class="site-header">
       <div class="container header-inner">
-        <a class="logo" href="index.html"><span>Dr.</span> Abel Orogo</a>
+        <div class="logo-wrapper">
+          <a class="logo" href="index.html"><span>Dr.</span> Abel Orogo</a>
+          <span class="page-name" id="pageName">CV</span>
+        </div>
         <nav class="nav" id="main-nav">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
@@ -38,21 +42,27 @@
       </div>
     </header>
 
+    <!-- ===== PAGE INDICATOR (Mobile) ===== -->
+    <div class="page-indicator" id="pageIndicator">
+      <span class="page-indicator-label">📋 CV</span>
+    </div>
+
+    <!-- ===== MAIN CONTENT ===== -->
     <main class="page-cv">
       <section class="container page-hero">
-  <div class="page-hero-inner">
-    <div class="page-hero-image fade-up fade-up-d1">
-      <div class="portrait-wrapper-small">
-        <div class="portrait-ring-small"></div>
-        <img src="port.jpg" alt="Professor Abel Orogo" class="page-profile-img">
-      </div>
-    </div>
-    <div class="page-hero-content fade-up fade-up-d2">
-      <h1 class="page-title">Curriculum <span class="highlight">Vitae</span></h1>
-      <p class="page-subtitle">A concise record of academic leadership, research impact and professional appointments.</p>
-    </div>
-  </div>
-</section>
+        <div class="page-hero-inner">
+          <div class="page-hero-image fade-up fade-up-d1">
+            <div class="portrait-wrapper-small">
+              <div class="portrait-ring-small"></div>
+              <img src="port.jpg" alt="Professor Abel Orogo" class="page-profile-img">
+            </div>
+          </div>
+          <div class="page-hero-content fade-up fade-up-d2">
+            <h1 class="page-title">Curriculum <span class="highlight">Vitae</span></h1>
+            <p class="page-subtitle">A concise record of academic leadership, research impact and professional appointments.</p>
+          </div>
+        </div>
+      </section>
 
       <section class="container page-content">
         <div class="cv-full-grid">
@@ -146,9 +156,13 @@
       </section>
     </main>
 
+    <!-- ===== FOOTER ===== -->
     <footer class="site-footer">
       <div class="container">
         <p>© <span id="year"></span> <span>Abel Orogo Mong'are</span> — Personal website built with excellence.</p>
+        <p style="margin-top: 8px; font-size: 12px;">
+          <a href="privacy.html" style="color: var(--muted); text-decoration: none;">Privacy Policy</a>
+        </p>
       </div>
     </footer>
 

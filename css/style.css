@@ -3066,3 +3066,141 @@ body.light-theme .portrait-ring::before {
     border-width: 3px;
   }
 }
+/* ============================================================
+   PAGE INDICATOR - Shows current page on mobile
+   ============================================================ */
+.page-indicator {
+  display: none;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(139, 26, 43, 0.08);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.page-indicator-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.page-indicator-label::before {
+  content: '📍';
+  font-size: 14px;
+}
+
+/* Show page indicator on mobile */
+@media (max-width: 768px) {
+  .page-indicator {
+    display: block;
+  }
+}
+
+/* Light theme support */
+body.light-theme .page-indicator {
+  background: rgba(0, 0, 0, 0.03);
+  border-bottom-color: rgba(139, 26, 43, 0.06);
+  color: var(--light-muted);
+}
+
+/* Dark mode support */
+body.dark-mode .page-indicator {
+  background: rgba(255, 255, 255, 0.04);
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+  color: var(--dark-muted);
+}
+/* ============================================================
+   LOGO WRAPPER - Shows page name next to logo
+   ============================================================ */
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.logo {
+  font-weight: 700;
+  color: var(--yellow);
+  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+.logo span { color: var(--yellow-light); }
+
+/* Page name next to logo */
+.page-name {
+  display: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--muted);
+  padding: 4px 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+/* Show page name on desktop (larger screens) */
+@media (min-width: 901px) {
+  .page-name {
+    display: inline-block;
+  }
+}
+
+/* Light theme support */
+body.light-theme .logo {
+  color: var(--maroon) !important;
+}
+body.light-theme .logo span {
+  color: var(--maroon-light) !important;
+}
+body.light-theme .page-name {
+  background: rgba(139, 26, 43, 0.04);
+  border-color: rgba(139, 26, 43, 0.06);
+  color: var(--light-muted);
+}
+
+/* Dark mode support */
+body.dark-mode .page-name {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.06);
+  color: var(--dark-muted);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+/* Tablets */
+@media (max-width: 1100px) {
+  .page-name {
+    font-size: 0.75rem;
+    padding: 3px 10px;
+  }
+  .logo { font-size: 0.9rem; }
+}
+
+/* Mobile - Hide page name in navbar (use page indicator instead) */
+@media (max-width: 900px) {
+  .page-name {
+    display: none !important;
+  }
+  .logo-wrapper {
+    gap: 6px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .logo { font-size: 0.8rem; }
+}
