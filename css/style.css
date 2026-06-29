@@ -112,7 +112,7 @@ body.light-theme ::-webkit-scrollbar-thumb {
   border-bottom: 1px solid rgba(139, 26, 43, 0.15);
   transition: background 0.4s ease, border-color 0.4s ease;
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
 }
 
 body.light-theme .site-header {
